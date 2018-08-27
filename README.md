@@ -10,6 +10,7 @@ My name is Salvador Villalon and I am Software Developer Intern
 at S&P Dow Jones Indices for Summer 2018. My manager gave me all sorts of projects
 that expose me to different fields of Technology. This repository consist of all the things I did throughout the internship.
 
+<br>
 
 # The Projects
 
