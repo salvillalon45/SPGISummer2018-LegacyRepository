@@ -13,6 +13,8 @@ that expose me to different fields of Technology. This repository consist of all
 
 # The Projects
 
+<br>
+
 ## Campus Recruiting Mockup Directory
 #### In This Project...
 - I remember back when I was applying to S&P Global for the Global IT Technology Internship Program, I wanted to learn more about what the internship program and what I could expect. I felt that the current website that they have did not provide the information I looked for or exposure to S&P Global. I decided to create a Mockup for this website based on what I have seen in other websites and something that can benefit future students interested in learning about S&P Global.
