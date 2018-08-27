@@ -7,7 +7,7 @@
 
 ## Introduction
 My name is Salvador Villalon and I am Software Developer Intern
-at S&P Dow Jones Indices for Summer 2018. My manager Sharath Srinivas gave me all sorts of projects
+at S&P Dow Jones Indices for Summer 2018. My manager gave me all sorts of projects
 that expose me to different fields of Technology. This repository consist of all the things I did throughout the internship.
 
 
@@ -33,7 +33,7 @@ that expose me to different fields of Technology. This repository consist of all
 
 ## Container Learning Directory
 #### In This Project...
-- During Monday morning of Week 2 of the internship, I decided to talk with Sreedhar Athikam. During my first week he asked me what my   expectations of the internship where, but at the moment I could not answer that question. That weekend I decided to reflect on what    my expectations where so that on Monday I could talk to him about it. As we were talking, we helped me clarify goals and    expectations for the internship and from this a project emerged. I was tasked with learning about Containers and creating a simple web application that will run inside a container. 
+- During Monday morning of Week 2 of the internship, I had a conversation with my manager's manager. During my first week he asked me what my   expectations of the internship where, but at the moment I could not answer that question. That weekend I decided to reflect on what    my expectations where so that on Monday I could talk to him about it. As we were talking, we helped me clarify goals and    expectations for the internship and from this a project emerged. I was tasked with learning about Containers and creating a simple web application that will run inside a container. 
 - Many of the tutorials used Flask and a cloud service to deploy their application. I decided to learn that as well. I learned how to use Flask and deploy web applications using Google App Engine. [You can find the application here](http://spgi2018-container-project.appspot.com/)
 
 - **container_presentation directory**
@@ -55,7 +55,7 @@ that expose me to different fields of Technology. This repository consist of all
 
 ## Jiras Directory
 #### In This Project...
--  I was given a total of 4 Jiras. These Jiras where good tasks because they taught me how to use important tools such as Apache Subversion (SVN), Git, GitHub Desktop, Java and Eclipse in a team setting. I was not able to store the other jiras I accomplished in this repository, but you can find the requiremenst here.
+-  I was given a total of 4 Jiras. These Jiras where good tasks because they taught me how to use important tools such as Apache Subversion (SVN), Git, GitHub Desktop, Java and Eclipse in a team setting. I do not have the other Jiras available.
 
 - **first_jira directory**
   - This directory contains the first project I worked on as an intern. I had to manually created 33 update SQL queries for a database that my intern supervisor needed
@@ -128,7 +128,7 @@ that expose me to different fields of Technology. This repository consist of all
 ## Tutorial Directory
 #### In This Project...
 - During Week 8 - 10, apart from working on my Natural Language Processing project I started making a tutorial for how to make a web application using Flask and deploying it to the cloud using Google App Engine. I decided to make this tutorial because when I was trying to deploy it to the cloud I had a hard time working with the specific things that each cloud service had. I came across Google App Engine, but the tutorial that Google offered left something important that prevented me from deploying my application. In the tutorial, I take you to the process I did when I first started.
-  - [An introduction to Web Applications and Deploying them to the Cloud]  (Link Coming Soon)
+  - [An introduction to Web Applications and Deploying them to the Cloud](Link Coming Soon) Link Coming Soon
 
 - **flask_tutorial directory**
   - Directory that contains everything needed to create the application
