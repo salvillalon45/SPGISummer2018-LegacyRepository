@@ -3,15 +3,11 @@
 <br>
 *S&P Dow Jones Indices, Web Technology*
 <br>
-*salvador.villalon@spglobal.com*
-<br>
 *salvav1@uci.edu*
-<br>
-*August 26, 2018*
 
 ## Introduction
 My name is Salvador Villalon and I am Software Developer Intern
-at S&P Dow Jones Indices for Summer 2018. My manager [Sharath Srinivas] (https://www.linkedin.com/in/sharaths/) gave me all sorts of projects
+at S&P Dow Jones Indices for Summer 2018. My manager Sharath Srinivas gave me all sorts of projects
 that expose me to different fields of Technology. This repository consist of all the things I did throughout the internship.
 
 
@@ -58,10 +54,6 @@ that expose me to different fields of Technology. This repository consist of all
 ## Jiras Directory
 #### In This Project...
 -  I was given a total of 4 Jiras. These Jiras where good tasks because they taught me how to use important tools such as Apache Subversion (SVN), Git, GitHub Desktop, Java and Eclipse in a team setting. I was not able to store the other jiras I accomplished in this repository, but you can find the requiremenst here.
-  -  [first jira]  (http://jira.spdji.mhf.mhc/browse/IDSCORE-3549)
-  -  [second  jira] (http://jira.spdji.mhf.mhc/browse/IDSCORE-3555)
-  -  [third jira] (http://jira.spdji.mhf.mhc/browse/IDSCORE-3560)
-  -  [fourth jira] (http://jira.spdji.mhf.mhc/browse/IDSCORE-3562)
 
 - **first_jira directory**
   - This directory contains the first project I worked on as an intern. I had to manually created 33 update SQL queries for a database that my intern supervisor needed
@@ -90,7 +82,7 @@ that expose me to different fields of Technology. This repository consist of all
 
 ## Python NLTK Directory
 #### In This Project...
-- During Week 8 - 10, my manager wanted me to learn more about the field of Natural Language Processing. He himself was still learning as well so it was a learning experience for both us. I was learning many methods that are used to analyze text. You can find all the things I did inside the directory. [I made a separate repository for this project] (https://github.cicd.spglobal.com/salvador-villalon/python-nlp) I recommend reading the readme first.
+- During Week 8 - 10, my manager wanted me to learn more about the field of Natural Language Processing. He himself was still learning as well so it was a learning experience for both us. I was learning many methods that are used to analyze text. You can find all the things I did inside the directory.
 
 - **python_nltk directory**
   - This directory contains everything I used for this project
@@ -107,7 +99,7 @@ that expose me to different fields of Technology. This repository consist of all
 
 ## REST API Learning Directory
 #### In This Project...
-- During Week 3 - 5, I levarage my fluency in Spanish to collaborate with an engineer from the S&P Global Mexico City Office. In this    project, I created an enhancement for the CARE Web Platform. We needed to give users of CARE the ability to check if the current file they have is locked or not. To do this I created a RESTful client that consumes the services from the Box RESTful API. This RESTful client became a Java Object that other developers will use to check if the file is locked or not. 
+- During Week 3 - 5, I levarage my fluency in Spanish to collaborate with an engineer from the S&P Global Mexico City Office. In this    project, I created an enhancement for an internal Web Platform. We needed to give users of this platform the ability to check if the current file they have is locked or not. To do this I created a RESTful client that consumes the services from the Box RESTful API. This RESTful client became a Java Object that other developers will use to check if the file is locked or not. 
 
 - I also created a Java class that will represent any errors from the Box API call.
 
@@ -134,9 +126,7 @@ that expose me to different fields of Technology. This repository consist of all
 ## Tutorial Directory
 #### In This Project...
 - During Week 8 - 10, apart from working on my Natural Language Processing project I started making a tutorial for how to make a web application using Flask and deploying it to the cloud using Google App Engine. I decided to make this tutorial because when I was trying to deploy it to the cloud I had a hard time working with the specific things that each cloud service had. I came across Google App Engine, but the tutorial that Google offered left something important that prevented me from deploying my application. In the tutorial, I take you to the process I did when I first started.
-  - [Part 1: Introduction to HTTP and Flask]  (https://thehub.spglobal.com/people/salvador_villalon/blog/2018/08/13/an-introduction-to-web-applications-and-deploying-them-to-the-cloud-part-1-introduction-to-http-and-flask)
-  - [Part 2: HTML, CSS, and Virtual Environments] (https://thehub.spglobal.com/people/salvador_villalon/blog/2018/08/13/an-introduction-to-web-applications-and-deploying-them-to-the-cloud-part-2-html-css-virtual-environments)
-  - [Part 3: Deploy Your Web Application to the Cloud] (https://thehub.spglobal.com/people/salvador_villalon/blog/2018/08/15/part-3-deploy-your-web-application-to-the-cloud)
+  - [An introduction to Web Applications and Deploying them to the Cloud]  ()
 
 - **flask_tutorial directory**
   - Directory that contains everything needed to create the application
