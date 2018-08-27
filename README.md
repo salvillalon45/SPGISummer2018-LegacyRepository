@@ -34,7 +34,7 @@ that expose me to different fields of Technology. This repository consist of all
 ## Container Learning Directory
 #### In This Project...
 - During Monday morning of Week 2 of the internship, I decided to talk with Sreedhar Athikam. During my first week he asked me what my   expectations of the internship where, but at the moment I could not answer that question. That weekend I decided to reflect on what    my expectations where so that on Monday I could talk to him about it. As we were talking, we helped me clarify goals and    expectations for the internship and from this a project emerged. I was tasked with learning about Containers and creating a simple web application that will run inside a container. 
-- Many of the tutorials used Flask and a cloud service to deploy their application. I decided to learn that as well. I learned how to use Flask and deploy web applications using Google App Engine. [You can find the application here] (http://spgi2018-container-project.appspot.com/)
+- Many of the tutorials used Flask and a cloud service to deploy their application. I decided to learn that as well. I learned how to use Flask and deploy web applications using Google App Engine. [You can find the application here](http://spgi2018-container-project.appspot.com/)
 
 - **container_presentation directory**
   - This directory contains the powerpoint presentation I made. It serves as introduction to what Containers are and how you can implement them using Docker
