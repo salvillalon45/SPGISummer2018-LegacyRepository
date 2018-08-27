@@ -128,7 +128,7 @@ that expose me to different fields of Technology. This repository consist of all
 ## Tutorial Directory
 #### In This Project...
 - During Week 8 - 10, apart from working on my Natural Language Processing project I started making a tutorial for how to make a web application using Flask and deploying it to the cloud using Google App Engine. I decided to make this tutorial because when I was trying to deploy it to the cloud I had a hard time working with the specific things that each cloud service had. I came across Google App Engine, but the tutorial that Google offered left something important that prevented me from deploying my application. In the tutorial, I take you to the process I did when I first started.
-  - [An introduction to Web Applications and Deploying them to the Cloud]  ()
+  - [An introduction to Web Applications and Deploying them to the Cloud]  (Link Coming Soon)
 
 - **flask_tutorial directory**
   - Directory that contains everything needed to create the application
