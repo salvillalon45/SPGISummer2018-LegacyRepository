@@ -1,0 +1,203 @@
+2// -------------------------------------------------
+// 7/19/2018
+// -------------------------------------------------
+
+Pruebas sin usar return new ObjectMapper().writeWithDefaultPrettyPrinter().writeValueAsString();
+
+
+Esto es mi JSON output sin usar return new ObjectMapper().writeWithDefaultPrettyPrinter().writeValueAsString();
+// -------------------------------------------------
+BoxAPIExceptionCode{
+  type='error',
+  status='404',
+  code='not_found',
+  context_info='ContextInfo {
+                            errors=
+                            [
+                              ContextInfoErrors{
+                                      reason='invalid_parameter',
+                                      name='item',
+                                      message=Invalid value 'f_1234'. 'item' with value 'f_1234' not found },
+                              ContextInfoErrors{
+                                      reason='invalid_parameter',
+                                      name='item',
+                                      message=Invalid value 'f_12346'. 'item' with value 'f_1234' not found },
+                              ContextInfoErrors{
+                                      reason='invalid_parameter',
+                                      name='item',
+                                      message=Invalid value 'f_12347'. 'item' with value 'f_6789' not found }
+                              ]
+                            }',
+  help_url='http://developers.box.com/docs/#errors',
+  message='Not Found',
+  request_id='h6uhr3ftd8fe622d}
+
+
+
+
+Esto es el valor de private ArrayList<ContextInfoErrors> errors;
+// -------------------------------------------------
+  [ ContextInfoErrors{
+                      reason='invalid_parameter',
+                      name='item',
+                      message=Invalid value 'f_1234'. 'item' with value 'f_1234' not found },
+    ContextInfoErrors{
+                      reason='invalid_parameter',
+                      name='item',
+                      message=Invalid value 'f_12346'. 'item' with value 'f_1234' not found },
+    ContextInfoErrors{
+                      reason='invalid_parameter',
+                      name='item',
+                      message=Invalid value 'f_12347'. 'item' with value 'f_6789' not found}
+  ]
+
+
+El output si yo hago this.getErrors()
+// -------------------------------------------------
+System.out.println("THIS-- " + this.getErrors());
+[ ContextInfoErrors{
+                    reason='invalid_parameter',
+                    name='item',
+                    message=Invalid value 'f_1234'. 'item' with value 'f_1234' not found },
+  ContextInfoErrors{
+                    reason='invalid_parameter',
+                    name='item',
+                    message=Invalid value 'f_12346'. 'item' with value 'f_1234' not found },
+  ContextInfoErrors{
+                    reason='invalid_parameter',
+                    name='item',
+                    message=Invalid value 'f_12347'. 'item' with value 'f_6789' not found}
+]
+// Esto es possible por que this es un referencias an un objecto tipo ContextInfo
+// por ejemplo, esto es lo mismo que si yo hago
+// ContextInfo obj = new ContextInfo();
+// obj.getErrors();
+// En este caso obj es this
+// y this es obj
+this.
+obj.invalid_paramete
+
+class A{
+
+method A1(){
+  B b  =  new B();
+  b.B1();
+  this.B1();
+}
+  }
+
+class B {
+
+  method B1(){}
+
+}
+
+
+El output si hacemos un for loop
+// -------------------------------------------------
+ERROR NUMBER 0 ::: ContextInfoErrors{  reason='invalid_parameter', name='item', message=Invalid value 'f_1234'. 'item' with value 'f_1234' not found}
+ERROR NUMBER 1 ::: ContextInfoErrors{  reason='invalid_parameter', name='item', message=Invalid value 'f_12346'. 'item' with value 'f_1234' not found}
+ERROR NUMBER 2 ::: ContextInfoErrors{  reason='invalid_parameter', name='item', message=Invalid value 'f_12347'. 'item' with value 'f_6789' not found}
+
+
+
+
+El output asArray si usamos ContextInfo[].class
+// -------------------------------------------------
+ContextInfo[] asArray = mapper.readValue(jsonArray, ContextInfo[].class);
+
+System.out.println("WHAT IS asArray " + asArray);
+
+String result = mapper.writeValueAsString(asArray);
+
+System.out.println("WHAT IS RESULT -- " + result);
+
+WHAT IS RESULT -- [{"errors":null},{"errors":null},{"errors":null}]
+
+// Esto me da null por que yo estoy diciendo que quiero un arreglo que contiene elementos tipo ContextInfo.
+// Pero esto no funciona por que tiene que ser un arreglo que contiene elemetons tipo ContextInfoErrors
+
+// -------------------------------------------------
+// Pero si hacemos ContextInfoErrors.class
+// -------------------------------------------------
+ContextInfoErrors[] asArray = mapper.readValue(jsonArray, ContextInfoErrors[].class);
+System.out.println("WHAT IS asArray " + asArray);
+// Tenemos que regrasar un String
+String result = mapper.writeValueAsString(asArray);
+System.out.println("WHAT IS RESULT -- " + result);
+
+WHAT IS RESULT -- [{"reason":"invalid_parameter","name":"item","message":"Invalid value 'f_1234'. 'item' with value 'f_1234' not found"},{"reason":"invalid_parameter","name":"item","message":"Invalid value 'f_12346'. 'item' with value 'f_1234' not found"},{"reason":"invalid_parameter","name":"item","message":"Invalid value 'f_12347'. 'item' with value 'f_6789' not found"}]
+
+
+
+
+El output de
+String w = new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(this);
+System.out.println("WHAT IS W -- == " + w);
+// -------------------------------------------------
+WHAT IS W -- == {
+  "errors" : [ {
+    "reason" : "invalid_parameter",
+    "name" : "item",
+    "message" : "Invalid value 'f_1234'. 'item' with value 'f_1234' not found"
+  }, {
+    "reason" : "invalid_parameter",
+    "name" : "item",
+    "message" : "Invalid value 'f_12346'. 'item' with value 'f_1234' not found"
+  }, {
+    "reason" : "invalid_parameter",
+    "name" : "item",
+    "message" : "Invalid value 'f_12347'. 'item' with value 'f_6789' not found"
+  } ]
+}
+
+El output de la forma que me enseno los articulos
+https://www.leveluplunch.com/java/examples/convert-json-array-to-arraylist-of-objects-jackson/
+http://www.baeldung.com/jackson-collection-array
+// -------------------------------------------------
+ObjectMapper mapper = new ObjectMapper();
+
+// Convertimos el array que se llama errors en un String
+String jsonArray = mapper.writeValueAsString(errors);
+
+// Usamos el jsonArray que tenemos y lo convertimos en un arreglo tipo ContextInfo
+ContextInfoErrors[] asArray = mapper.readValue(jsonArray, ContextInfoErrors[].class);
+
+// Tenemos que regrasar un String
+String result = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(asArray);
+
+System.out.println("WHAT IS RESULT -- " + result);
+WHAT IS RESULT -- [ {
+  "reason" : "invalid_parameter",
+  "name" : "item",
+  "message" : "Invalid value 'f_1234'. 'item' with value 'f_1234' not found"
+}, {
+  "reason" : "invalid_parameter",
+  "name" : "item",
+  "message" : "Invalid value 'f_12346'. 'item' with value 'f_1234' not found"
+}, {
+  "reason" : "invalid_parameter",
+  "name" : "item",
+  "message" : "Invalid value 'f_12347'. 'item' with value 'f_6789' not found"
+} ]
+
+
+// La diferencia es que al usar new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(this);
+// nos esta dando la represantacion del objeto this.
+// Por ejemplo lo que esta pasando es que
+// ContextInfo obj = new ContextInfo()
+// System.out.println(obj);
+// Donde esto nos va a dar un output de el variable privado errors (Gracias al metodo to String)
+
+
+// Si usamos el metodo where "convert a json array to a java ArrayList using jackson JSON parser"
+// nos da el contenido de la lista errors
+
+
+// DRAFT
+String result = "";
+		for (int i = 0; i < errors.size(); i++)
+		{
+			result = result + errors.get(i);
+			System.out.println("ERROR NUMBER " + i + " ::: " + errors.get(i));
+		}

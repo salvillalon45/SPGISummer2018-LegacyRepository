@@ -1,0 +1,119 @@
+// Usando los articulos que me distes
+// ------------------------------------------------------------------------------
+
+// Creamos un objecto mapper
+ObjectMapper mapper = new ObjectMapper();
+
+// Convertimos el array que se llama errors en un String
+String jsonArray = mapper.writeValueAsString(errors);
+
+// Donde jsonArray es igual a
+"[ {
+      "reason" : "invalid_parameter",
+      "name" : "item",
+      "message" : "Invalid value 'f_12'. 'item' with value 'f_12' not found"
+  }, {
+      "reason" : "invalid_parameter",
+      "name" : "item",
+      "message" : "Invalid value 'f_14'. 'item' with value 'f_14' not found"
+} ]"
+
+// Usamos el jsonArray que tenemos y lo convertimos en un arreglo tipo ContextInfo
+ContextInfo[] asArray = mapper.readValue(jsonArray, ContextInfo[].class);
+
+// Tenemos que regrasar un String
+String result = mapper.writeValueAsString(asArray);
+
+// Regresamos el String
+return result;
+
+// Preguntas y Comentarios
+// ------------------------------------------------------------------------------
+- Intente todo el proceso que escribi arriba pero no funciona
+
+- Pense en usar un For Loop para hacer iterate el asArray y poner el contenido en un variable
+  result.
+String result = "";
+			for (int i = 0; i < asArray.length; i++)
+			{
+				result = result + asArray[i];
+		  }
+			return result;
+
+- Tambien me di cuenta que si hago comment todo el metodo toString() en ContextInfo y
+  regreso nomas un string vacio, ejemplo return ""; Aun mostra un output con una lista de errors
+  Tu sabes por que pasa esto?
+  {
+  "type" : "error",
+  "status" : 404,
+  "code" : "not_found",
+  "help_url" : "http://developers.box.com/docs/#errors",
+  "message" : "Not Found",
+  "request_id" : "25pzcftc4r2oji5",
+  "context_info" : {
+    "errors" : [ {
+      "reason" : "invalid_parameter",
+      "name" : "item",
+      "message" : "Invalid value 'f_12'. 'item' with value 'f_12' not found"
+     } ]
+   }
+ }
+
+- En ContextInfo.java e intentado de imprimir el resultado de el array pero siempre que hago run as
+  no se imprime nada. Pienso que la clase ContextInfo no la estan llamando entonces cree un objeto
+  ContextInfo en mi Main.java
+
+  ContextInfo w = new ContextInfo();
+	System.out.println(w.toString());
+
+  para ver si se imprime algo. Esto me dio un result de { errors : null }. Tu sabes un mejor manera
+  para poder ver el contenido del arreglo?
+
+
+
+  BoxAPIExceptionCode: 404Response: {
+    "type": "error",
+    "status": 404,
+    "code": "not_found",
+    "context_info": {
+      "errors": [
+        {
+          "reason": "invalid_parameter",
+          "name": "item",
+          "message": "Invalid value 'f_1234'. 'item' with value 'f_1234' not found"
+
+        },
+        {
+          "reason": "invalid_parameter",
+          "name": "item",
+          "message": "Invalid value 'f_1234'. 'item' with value 'f_1234' not found"
+        },
+      ]
+    },
+    "help_url": "http:\/\/developers.box.com\/docs\/#errors",
+    "message": "Not Found",
+    "request_id": "h6uhr3ftd8fe622d"
+  }
+
+{\n               \"type\": \"error\",
+\n              \"status\": 404,\n
+                  \"code\": \"not_found\",
+    \n    \"context_info\": {\n
+                        \"errors\": [\n
+                          {\n
+                                  \"reason\": \"invalid_parameter\",
+                            \n      \"name\": \"item\",
+                            \n   \"message\": \"Invalid value \'f_1234\'. \'item\' with value \'f_1234\' not found\"\n
+                          },
+            \n            {\n     \"reason\": \"invalid_parameter\",
+            \n                      \"name\": \"item\",
+            \n                   \"message\": \"Invalid value \'f_12346\'. \'item\' with value \'f_1234\' not found\"\n
+                          },      \n\n
+                          {\n     \"reason\": \"invalid_parameter\",
+                          \n        \"name\": \"item\",
+                          \n     \"message\": \"Invalid value \'f_12347\'. \'item\' with value \'f_6789\' not found\"\n        }\n
+                          ]\n   }\n
+              \"help_url\": \"http:\\/\\/developers.box.com\\/docs\\/#errors\",
+            \n \"message\": \"Not Found\",
+         \n \"request_id\": \"h6uhr3ftd8fe622d\"
+\n  }

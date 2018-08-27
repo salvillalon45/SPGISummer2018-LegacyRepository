@@ -1,0 +1,19 @@
+Project Folder Structure
+*We are at the root level*
+- templates
+  - about.html
+  - home.html
+  - template.html
+- static
+  - css
+    - template.css
+- virtual
+  - Include
+  - Lib
+  - Scripts
+  - tcl
+  - pip-selfcheck.json
+- app.yaml: Configure the settings of your App Engine application
+- appengine_config.py: File to specify where App Engine should look for
+                       third-party libraries
+- requirements.txt: Packagaes that you will need for your application to run
