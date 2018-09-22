@@ -12,7 +12,7 @@ Hello,
 My name is Salvador Villalon and I am Software Developer Intern
 at S&P Dow Jones Indices for Summer 2018.
 
-My manager Sharath Srinivas asked to explore what we can do with
+My manager asked to explore what we can do with
 Python and NLTK. Here you will find some of the concepts I worked
 with.
 
