@@ -1,0 +1,70 @@
+﻿// ------------------------------------------------------------
+// Salvador Villalon
+// SPDJI Summer 2018
+// Notes for Python and the Natural Language Tool Kit projects
+// ------------------------------------------------------------
+
+Characters that where causing the error
+// ------------------------------------------------------------
+- “ ”
+-
+
+Characters that are noise
+// ------------------------------------------------------------
+- Example: â€˜talkedâ€™
+  - ˜ Small Tilde - 0x02DC
+  - â Latin Small Letter a with Circumflex - 0x00E2
+  - ™ Trade Mark Sign - 0x2122
+  - € Euro Sign - 0x20AC
+
+- \r\n\r\n
+
+- Â
+
+- \n\n
+
+- \r\n
+
+- whitespace-whitespace
+  - whitespace = " "
+  - Space surrounding the subtraction sign
+
+- whitespace.
+  - whitespace = " "
+  - Space to the left of the period.
+-                  
+  - A space of 17 whitespaces
+-                 
+  - A space of 16 whitespaces
+-       
+  - A space of 6 whitespaces
+
+-   A weaker U.S. dollar
+  -  A weaker U.S. dollar
+  - Replace with just one space in front
+
+Parsing through Json
+// ------------------------------------------------------------
+# for post in json_data:
+    # post_dict[post["ID"]] = post["ID"]
+    # post_dict[post["ID"]] = post["post_content"]
+
+Strange error
+// ------------------------------------------------------------
+I am not sure why the ending quote of 'talked' get removed.
+It gets removed when I used blob.words. This is inside tf_idf.py
+'talked' after I used blob.words it turns into 'talked
+This is inside tf_idf.py
+
+Sample Text to Use for Summarizer
+// ------------------------------------------------------------
+text_1 = "Python is a 2000 made-for-TV horror movie directed by Richard " + \
+"Clabaugh. The film features several cult favorite actors, including William" + \
+"Zabka of The Karate Kid fame, Wil Wheaton, Casper Van Dien, Jenny McCarthy," + \
+"Keith Coogan, Robert Englund (best known for his role as Freddy Krueger in the" + \
+"A Nightmare on Elm Street series of films), Dana Barron, David Bowe, and Sean" + \
+"Whalen. The film concerns a genetically engineered snake, a python, that" + \
+"escapes and unleashes itself on a small town. It includes the classic final" + \
+"girl scenario evident in films like Friday the 13th. It was filmed in Los Angeles," + \
+ "California and Malibu, California. Python was followed by two sequels: Python" + \
+ "II (2002) and Boa vs. Python (2004), both also made-for-TV films."

@@ -1,0 +1,7 @@
+nltk
+beautifulsoup4
+Flask
+gensim
+pandas
+scikit-learn
+textblob
